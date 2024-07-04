@@ -1,0 +1,163 @@
+body {
+    font-family: 'Kanit';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 750px;
+    height: 710px;
+    border: 1px solid blue;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+h2{
+  font-size: 26px;  
+  font-weight: bolder;
+  padding-bottom: 18px;
+}
+
+.menu{
+    width: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-child1 input{
+    width: 595px;
+    height: 25px;
+    padding: 0;
+    border: 1px solid blue;
+    border-radius: 6px;
+    padding-left: 10px;
+    background-image: url(images/9135995.png);
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Adjusts the image position to the right */
+    background-size: 20px 20px; /* Adjust size of the image */
+}
+
+.task-list{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.task-item{
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-child2 select{
+    background-color: rgb(121, 121, 224);
+    color: white;
+    height: 28px;
+    border: 1px solid blue;
+    border-radius: 6px;
+}
+
+.footer{
+    padding: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer .abc{
+    font-size: 24px;
+    width: 50px;
+    height: 50px; 
+    border-radius: 50%; 
+    border: none;
+    background-color: rgb(121, 121, 224);
+    color: white;
+    cursor: pointer;
+    bottom: 32px; 
+    right: 10px; 
+}
+
+
+/* over play là cái thằng làm mờ background lúc popup hiện ra */
+.popup .overplay { 
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 500px;
+    height: 289px;
+    z-index: 2;
+    text-align: center;
+    border: 1px solid blue;
+    border-radius: 10px;
+}
+
+.popup .content button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+}
+
+.popup .content .btn-apply{
+    background-color: rgb(66, 66, 219);
+    color: white;
+}
+
+.popup .content .btn-edit{
+    background-color: rgb(66, 66, 219);
+    color: white;
+}
+
+.popup .content input{
+    width: 440px;
+    height: 28px;
+    border: 1px solid;
+}
+
+.popup.active .overplay {
+    display: block;
+}
+
+.popup.active .content{
+    /* hiển thị ra dần dần trong 300ms */
+    transition: all 300ms ease-in-out; 
+    /* hiệu ứng zoom mở dần ra*/
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.task-btn button{
+    width: 30px;
+    font-weight: bolder;
+}
+
+.pagination button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}

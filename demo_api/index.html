@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Kanit"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>TODO LIST</h2>
+      <div class="menu">
+        <div class="menu-child1">
+          <input type="text" id="search" placeholder="Search note..." />
+        </div>
+        <div class="menu-child2">
+          <select name="" id="filter">
+            <option value="all">ALL</option>
+            <option value="done">DONE</option>
+            <option value="notdone">NOT DONE</option>
+          </select>
+        </div>
+        <!-- <div class="menu-child2">
+          <select name="" id="record">
+            <option value="5">5</option>
+            <option value="10">10</option>
+          </select>
+        </div> -->
+      </div>
+      <div class="task-list" id="task-list">
+        <!-- <div class="task-item">
+          <div class="task-name">NOTE 1</div>
+          <div class="task-btn">
+            <button class="btn-info">i</button>
+            <button class="btn-remove">-</button>
+          </div>
+        </div> -->
+      </div>
+      <div class="footer">
+        <button class="abc" onclick="togglePopup()">+</button>
+        <div class="pagination" id="pagination"></div>
+      </div>
+    </div>
+
+    <div class="popup" id="popup-1">
+      <div class="overplay"></div>
+      <div class="content">
+        <h1>NEW NOTE</h1>
+        <input type="text" id="new-task" placeholder="Note" />
+        <div class="button-popup">
+          <button class="btn-cancel" onclick="togglePopup()">CANCEL</button>
+          <button class="btn-apply" id="btn-apply">APPLY</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popup-2">
+      <div class="overplay"></div>
+      <div class="content">
+        <h1>EDIT TASK</h1>
+        <input type="text" id="edit-task" placeholder="Note" />
+        <div class="button-popup">
+          <button class="btn-cancel" onclick="togglePopup2()">CANCEL</button>
+          <button class="btn-edit" id="btn-edit">EDIT</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="index2.js"></script>
+  </body>
+</html>
