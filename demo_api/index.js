@@ -47,6 +47,7 @@ window.onload = function () {
     function renderTask(tasksParam) {
         var taskList = $("task-list");
         var taskListHtml = [];
+
         var taskRender = tasksParam || tasks;
         if (taskRender.length === 0) {
             taskListHtml.push("<p>No task !!!!</p>");
